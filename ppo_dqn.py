@@ -180,7 +180,7 @@ class DQN(nn.Module):
         self.fc2 = nn.Linear(64, output_dim)
 
     def forward(self, x):
-        x = F.relu(self.fc1(x))
+        x = self.fc1(x)
         return self.fc2(x)
 
 
